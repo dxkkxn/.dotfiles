@@ -1,1 +1,0 @@
-/home/youssef/.dotfiles/.doom.d
