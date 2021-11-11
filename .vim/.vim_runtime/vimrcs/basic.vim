@@ -25,9 +25,13 @@
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" My config:
+set foldmethod=syntax
+nmap <TAB> :exe "normal za"<cr>
+set nocompatible
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
@@ -46,7 +50,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = " " 
 
 " Fast saving
-nmap <leader>fs :w!<cr>
+nmap <leader>bs :w!<cr>
 nmap <leader>q :q<cr>
 
 " :W sudo saves the file
@@ -200,7 +204,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 "map <C-space> ?
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+nmap <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
 nnoremap <leader>wh <C-w>h
@@ -211,20 +215,20 @@ nnoremap <leader>wv <C-w>v
 nnoremap <leader>wd <C-w>c
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+nmap <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 "Close all the buffers
-map <leader>bda :bufdo bd<cr>
+nmap <leader>bda :bufdo bd<cr>
 
-map <leader>bn :bnext<cr>
-map <leader>bN :bprevious<cr>
+nmap <leader>bn :bnext<cr>
+nmap <leader>bN :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader><TAB> :tabnext
+nmap <leader>tn :tabnew<cr>
+nmap <leader>to :tabonly<cr>
+nmap <leader>tc :tabclose<cr>
+nmap <leader>tm :tabmove
+nmap <leader><TAB> :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -234,10 +238,10 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+nmap <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+nmap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers
 try
@@ -291,13 +295,13 @@ endif
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing <leader>ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+nmap <leader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+nmap <leader>sn ]s
+nmap <leader>sp [s
+nmap <leader>sa zg
+nmap <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,13 +311,13 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>bn :e ~/buffer<cr>
+nmap <leader>bn :e ~/buffer<cr>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+nmap <leader>x :e ~/buffer.md<cr>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+nmap <leader>pp :setlocal paste!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

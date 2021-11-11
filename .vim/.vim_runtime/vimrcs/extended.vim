@@ -9,9 +9,7 @@
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
-if has("mac") || has("macunix")
-    set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
-elseif has("win16") || has("win32")
+if has("win16") || has("win32")
     set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
     set gfn=IBM\ Plex\ Mono\ 14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
@@ -25,14 +23,8 @@ endif
 
 " Colorscheme
 set background=dark
-colorscheme atom-dark-256
+colorscheme atom-dark
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Fast editing and reloading of vimrc configs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
-autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,7 +109,7 @@ endif
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
 " Open Ack and put the cursor in the right position
-map <leader>g :Ack 
+nmap <leader>g :Ack 
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
@@ -133,10 +125,10 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+nmap <leader>cc :botright cope<cr>
+nmap <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+nmap <leader>n :cn<cr>
+nmap <leader>p :cp<cr>
 
 " Make sure that enter is never overriden in the quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
