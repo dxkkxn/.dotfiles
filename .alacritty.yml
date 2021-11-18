@@ -1,19 +1,6 @@
 font:
   normal:
-    family: roboto mono for powerline
-    style: Regular
-
-  bold:
-    family: roboto mono for powerline
-    style: Bold
-
-  italic:
-    family: roboto mono for powerline
-    style: Italic
-
-  bold_italic:
-    family: roboto mono for powerline
-    style: Bold Italic
+    family: "MesloLGS NF"
 
   size: 11
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
@@ -82,7 +69,7 @@ window:
 
   # Window title
   title: Alacritty
-  opacity: 0.9
+  opacity: 0.99
 
   # Window class (Linux/BSD only):
   class:
