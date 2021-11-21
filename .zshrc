@@ -113,5 +113,5 @@ source $ZSH/oh-my-zsh.sh
 #My config
 set -o vi
 alias doom="~/.emacs.d/bin/doom"
-export GRAPH="/home/youssef/univ-work/L3/S5/I51-Algorithmique-des-graphes"
+export GRAPH="/home/youssef/univ-tln/L3/S5/I51-Algorithmique-des-graphes"
 alias display="export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0"
