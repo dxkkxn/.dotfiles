@@ -1,1 +1,1 @@
-/home/youssef/.dotfiles/.doom.d
+/home/dxkkxn/.dotfiles/.doom.d
