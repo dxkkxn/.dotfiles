@@ -34,7 +34,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -54,5 +54,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; My config
+
 (map! :desc "fold toggle"
       :ne "<tab>" #'+fold/toggle)
+
+(global-display-fill-column-indicator-mode 1)
+(setq-default display-fill-column-indicator-column 79)
