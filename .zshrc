@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/youssef/.oh-my-zsh"
+export ZSH="/home/dakkon/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -113,5 +113,6 @@ source $ZSH/oh-my-zsh.sh
 #My config
 set -o vi
 alias doom="~/.emacs.d/bin/doom"
-export GRAPH="/home/youssef/univ-tln/L3/S5/I51-Algorithmique-des-graphes"
+export GRAPH="/home/dakkon/univ-tln/L3/S5/I51-Algorithmique-des-graphes"
 alias display="export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0"
+bindkey '^R' history-incremental-search-backward
