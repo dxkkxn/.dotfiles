@@ -115,6 +115,7 @@ set -o vi
 alias doom="~/.emacs.d/bin/doom"
 export GRAPH="/home/dakkon/univ-tln/L3/S5/I51-Algorithmique-des-graphes"
 alias display="export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0"
+PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 bindkey '^R' history-incremental-search-backward
 export PATH=$PATH:~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
