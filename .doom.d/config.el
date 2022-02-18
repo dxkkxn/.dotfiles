@@ -61,3 +61,9 @@
 
 (global-display-fill-column-indicator-mode 1)
 (setq-default display-fill-column-indicator-column 79)
+(require 'package)
+(add-to-list 'package-archives
+   '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(use-package exec-path-from-shell
+  :config (exec-path-from-shell-initialize))
