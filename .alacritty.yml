@@ -1,6 +1,6 @@
 font:
   normal:
-    family: "MesloLGS NF"
+    family: "JetBrainsMono"
 
   size: 11
 # Configuration for Alacritty, the GPU enhanced terminal emulator.

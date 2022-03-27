@@ -1,1 +1,0 @@
-/home/dxkkxn/.dotfiles/.doom.d
